@@ -1,14 +1,14 @@
 import React,{useState} from 'react';
 import './App.css';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light') // whether dark mode is enabled or not
@@ -53,18 +53,18 @@ function App() {
       {/* <Navbar title = "TextUtils" aboutText = "About TextUtils" /> */}
       {/*React.StrictMode so that any wrong text can't be accepted */}
       <React.StrictMode> 
-      <Router>
+//       <Router>
         <Navbar title = "TextUtils" mode={mode} toggleMode={toggleMode}/>    
         <Alert alert={alert}/>                   
         <div className="container my-3">
-          <Routes>
-            <Route exact path="/about" element={<About/>} />
-            <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Enter The Text to analyze below" mode={mode} />} />
-          </Routes>
-          {/* <TextForm showAlert={showAlert} heading = "Enter The Text to analyze below" mode={mode} />
-        <About/> */}
+//           <Routes>
+//             <Route exact path="/about" element={<About/>} />
+//             <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Enter The Text to analyze below" mode={mode} />} />
+//           </Routes>
+          {<TextForm showAlert={showAlert} heading = "Enter The Text to analyze below" mode={mode} />
+//         <About/>}
         </div>
-      </Router>
+//       </Router>
       </React.StrictMode>
     </>
   );
