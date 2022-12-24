@@ -61,8 +61,8 @@ function App() {
 //             <Route exact path="/about" element={<About/>} />
 //             <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Enter The Text to analyze below" mode={mode} />} />
 //           </Routes>
-          {<TextForm showAlert={showAlert} heading = "Enter The Text to analyze below" mode={mode} />
-//         <About/>}
+          <TextForm showAlert={showAlert} heading = "Enter The Text to analyze below" mode={mode} />
+//         {<About/>}
         </div>
 //       </Router>
       </React.StrictMode>
